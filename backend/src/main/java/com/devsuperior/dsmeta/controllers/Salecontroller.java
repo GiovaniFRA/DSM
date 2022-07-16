@@ -29,7 +29,7 @@ public class Salecontroller {
 			Pageable pageable){
 		return  service.findSales(minDate,maxDate,pageable);
 	}
-	@GetMapping("/{id}/ClonarCartao")
+	@GetMapping("/{id}/notification")
 	public void notifySms(@PathVariable Long id) {
 		smsService.sendSms(id);
 	}
